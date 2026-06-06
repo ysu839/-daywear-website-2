@@ -1,0 +1,421 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DAYWEAR is a premium streetwear concept built for long days: clean oversized essentials, washed fabric, subtle embroidery, and cinematic product worlds."
+    />
+    <title>DAYWEAR | Built For Long Days</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Barlow:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader-mark">
+        <span>D</span><span>W</span>
+        <i></i><i></i><i></i><i></i>
+      </div>
+      <p>DAYWEAR</p>
+    </div>
+
+    <canvas id="daywear-canvas" aria-label="DAYWEAR cinematic 3D fabric scene"></canvas>
+
+    <header class="site-header" aria-label="Primary">
+      <a class="brand-link nav-route" href="#/" aria-label="DAYWEAR home">
+        <span class="brand-mark">DW</span>
+        <span class="brand-word">DAYWEAR</span>
+      </a>
+      <nav class="desktop-nav">
+        <a class="nav-route" href="#/collections/all">Shop</a>
+        <a class="nav-route" href="#/collections/zip-hoodies">Zip Hoodies</a>
+        <a class="nav-route" href="#/collections/t-shirts">T-Shirts</a>
+        <a class="nav-route" href="#/lookbook">Lookbook</a>
+        <a class="nav-route" href="#/about">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="sound-toggle" type="button" aria-label="Toggle ambient sound">
+          <span class="sound-icon" aria-hidden="true"></span>
+        </button>
+        <a class="cart-link nav-route" href="#/cart" aria-label="Cart">Bag <span>0</span></a>
+      </div>
+    </header>
+
+    <main id="home-view">
+      <section class="hero scene-section" data-scene="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Drop 01 / Premium daily uniform</p>
+          <h1>DAYWEAR</h1>
+          <p class="hero-line">Clean streetwear built for long days.</p>
+          <div class="hero-actions">
+            <a class="magnetic-button nav-route" href="#/collections/all">Shop The Drop</a>
+            <a class="ghost-link nav-route" href="#/fabric-dna">View Fabric</a>
+          </div>
+        </div>
+        <div class="scroll-index" aria-hidden="true">
+          <span>01</span>
+          <b></b>
+          <span>08</span>
+        </div>
+      </section>
+
+      <section class="brand-statement scene-section" data-scene="statement">
+        <div class="statement-wrap">
+          <p class="eyebrow">The daily uniform</p>
+          <h2>Oversized essentials, washed down until they feel lived in from the first wear.</h2>
+          <p>
+            Hoodies, tees, shorts, sweatpants, jeans, tracksuits, and summer sets with quiet labels,
+            heavy cotton, and a luxury streetwear weight.
+          </p>
+        </div>
+      </section>
+
+      <section class="category-showroom scene-section" id="categories" data-scene="categories">
+        <div class="section-kicker">Product rotation</div>
+        <div class="category-copy">
+          <p class="eyebrow">Choose a room</p>
+          <h2 id="active-category-title">Zip Hoodies</h2>
+          <p id="active-category-desc">
+            Heavyweight zipped layers with dropped shoulders, double zip hardware, and tonal DW embroidery.
+          </p>
+          <a class="shop-now-link nav-route" id="active-category-link" href="#/collections/zip-hoodies">
+            Shop Now
+          </a>
+        </div>
+        <div class="category-rail" id="category-rail" aria-label="DAYWEAR categories"></div>
+        <div class="webgl-fallback" id="webgl-fallback">
+          <a class="nav-route" href="#/collections/zip-hoodies">Zip Hoodies</a>
+          <a class="nav-route" href="#/collections/t-shirts">T-Shirts</a>
+          <a class="nav-route" href="#/collections/shorts">Shorts</a>
+          <a class="nav-route" href="#/collections/sweatpants">Sweatpants</a>
+          <a class="nav-route" href="#/collections/jeans">Jeans</a>
+          <a class="nav-route" href="#/collections/tracksuits">Tracksuits</a>
+          <a class="nav-route" href="#/collections/longsleeves">Longsleeves</a>
+          <a class="nav-route" href="#/collections/summer-sets">Summer Sets</a>
+        </div>
+      </section>
+
+      <section class="editorial-categories content-section" id="collection-grid">
+        <p class="section-label">The Collection</p>
+        <div class="categories-grid" aria-label="DAYWEAR collection categories">
+          <a class="category-card nav-route" href="#/collections/zip-hoodies" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 20L20 40L10 80L20 85L22 60L22 130L98 130L98 60L100 85L110 80L100 40L80 20L70 30C65 35 55 35 50 30L40 20Z" />
+                <path d="M60 32V128M48 54H72" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Zip Hoodies</span>
+              <span class="category-count">8 Styles</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/t-shirts" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M45 20L20 40L10 70L28 75L28 130L92 130L92 75L110 70L100 40L75 20C72 28 48 28 45 20Z" />
+                <circle cx="60" cy="28" r="8" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">T-Shirts</span>
+              <span class="category-count">12 Styles</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/sweatpants" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 20L25 80L20 140L55 140L60 88L65 140L100 140L95 80L90 20Z" />
+                <path d="M27 34Q60 29 93 34" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Sweatpants</span>
+              <span class="category-count">6 Styles</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/tracksuits" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 18L23 38L18 76L27 82L29 58L29 86H91L91 58L93 82L102 76L97 38L80 18L70 28H50L40 18Z" />
+                <path d="M32 92L28 142H55L60 108L65 142H92L88 92Z" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Tracksuits</span>
+              <span class="category-count">4 Sets</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/shorts" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 15L18 82L55 82L60 50L65 82L102 82L95 15Z" />
+                <path d="M25 28H95" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Shorts</span>
+              <span class="category-count">8 Styles</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/jeans" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 18L22 80L18 142L55 142L60 88L65 142L102 142L98 80L92 18Z" />
+                <path d="M30 29Q60 25 90 29M60 30V88" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Jeans</span>
+              <span class="category-count">5 Cuts</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/longsleeves" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M45 20L20 38L8 104L22 109L29 62L29 130L91 130L91 62L98 109L112 104L100 38L75 20C72 28 48 28 45 20Z" />
+                <circle cx="60" cy="28" r="8" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Longsleeves</span>
+              <span class="category-count">7 Styles</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+          <a class="category-card nav-route" href="#/collections/summer-sets" data-cursor="SHOP">
+            <span class="category-bg"></span>
+            <span class="category-visual" aria-hidden="true">
+              <svg class="garment-icon" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M45 15L22 32L16 62L31 66L31 82H89L89 66L104 62L98 32L75 15C72 23 48 23 45 15Z" />
+                <path d="M25 88L19 130H55L60 108L65 130H101L95 88Z" />
+              </svg>
+            </span>
+            <span class="category-info">
+              <span class="category-name">Summer Sets</span>
+              <span class="category-count">3 Sets</span>
+            </span>
+            <span class="category-arrow" aria-hidden="true">â†—</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="countdown scene-section" data-scene="countdown">
+        <div class="countdown-copy">
+          <p class="eyebrow">Next drop</p>
+          <h2>DROP 01</h2>
+          <p>COMING SOON</p>
+          <div class="timer" aria-label="Drop countdown">
+            <span><b id="days">00</b>D</span>
+            <span><b id="hours">00</b>H</span>
+            <span><b id="minutes">00</b>M</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="behind scene-section" data-scene="behind">
+        <div class="behind-copy">
+          <p class="eyebrow">Behind the garment</p>
+          <h2>Built around fabric, fit, and subtle detail.</h2>
+        </div>
+        <div class="callout-grid">
+          <button type="button">450 GSM cotton</button>
+          <button type="button">Garment washed finish</button>
+          <button type="button">Oversized fit</button>
+          <button type="button">Custom DAYWEAR label</button>
+          <button type="button">Embroidered DW logo</button>
+          <button type="button">Built For Long Days</button>
+        </div>
+      </section>
+
+      <section class="fabric-dna scene-section" id="fabric-dna" data-scene="fabric">
+        <div class="fabric-copy">
+          <p class="eyebrow">Fabric DNA</p>
+          <h2>Cotton fibers, raised embroidery, zipper teeth, and washed texture close enough to inspect.</h2>
+          <button class="magnetic-button" id="fabric-zoom" type="button">View Fabric</button>
+        </div>
+        <div class="dna-panel">
+          <canvas id="fabric-canvas" class="fabric-zoom-canvas" aria-label="Animated DAYWEAR fabric close-up"></canvas>
+          <div class="dna-callouts" aria-hidden="true">
+            <span style="--x: 56%; --y: 20%">450 GSM Cotton</span>
+            <span style="--x: 38%; --y: 42%">Garment Washed</span>
+            <span style="--x: 60%; --y: 64%">Double Stitched</span>
+            <span style="--x: 28%; --y: 78%">Raised DW Logo</span>
+          </div>
+        </div>
+        <div class="fabric-specs" aria-label="Fabric specs">
+          <span><b>450</b> GSM Cotton</span>
+          <span><b>01</b> Custom Label</span>
+          <span><b>5</b> Washed Colorways</span>
+          <span><b>DW</b> Tonal Embroidery</span>
+        </div>
+      </section>
+
+      <section class="fit-builder scene-section" data-scene="builder">
+        <div class="builder-copy">
+          <p class="eyebrow">Build your fit</p>
+          <h2>Layer a full DAYWEAR uniform without leaving the room.</h2>
+        </div>
+        <div class="fit-controls" id="fit-controls">
+          <button type="button" data-fit="Zip Hoodie + Sweatpants" class="is-active">Zip Hoodie + Sweatpants</button>
+          <button type="button" data-fit="Tee + Shorts">Tee + Shorts</button>
+          <button type="button" data-fit="Longsleeve + Jeans">Longsleeve + Jeans</button>
+          <button type="button" data-fit="Tracksuit Set">Tracksuit Set</button>
+        </div>
+        <p class="fit-label" id="fit-label">Zip Hoodie + Sweatpants</p>
+      </section>
+
+      <section class="timeline scene-section" data-scene="timeline">
+        <div class="timeline-heading">
+          <p class="eyebrow">Drop 01 timeline</p>
+          <h2>From first sketch to first release.</h2>
+        </div>
+        <ol class="timeline-list">
+          <li><span>01</span> Concept</li>
+          <li><span>02</span> Fabric</li>
+          <li><span>03</span> Sample</li>
+          <li><span>04</span> Fit</li>
+          <li><span>05</span> Drop</li>
+        </ol>
+      </section>
+
+      <section class="lookbook scene-section" data-scene="lookbook">
+        <div class="lookbook-copy">
+          <p class="eyebrow">Floating lookbook</p>
+          <h2>Editorial frames drifting through a dark DAYWEAR studio.</h2>
+        </div>
+        <div class="lookbook-strip" aria-label="Lookbook moments">
+          <div><span>Morning layer</span></div>
+          <div><span>Studio fit</span></div>
+          <div><span>Night uniform</span></div>
+        </div>
+      </section>
+
+      <section class="packaging scene-section" data-scene="packaging">
+        <div class="packaging-copy">
+          <p class="eyebrow">Packaging reveal</p>
+          <h2>Folded hoodie, dust bag, thank-you card, clean box.</h2>
+          <a class="magnetic-button nav-route" href="#/collections/all">Enter Shop</a>
+        </div>
+      </section>
+
+      <section class="newsletter-section content-section">
+        <div>
+          <p class="eyebrow">Next release</p>
+          <h2>Stay in<br /><em>the loop</em></h2>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note" id="newsletter-note" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer class="site-footer scene-section" data-scene="footer">
+        <div class="footer-brand">
+          <p class="eyebrow">DAYWEAR</p>
+          <h2>Built For Long Days</h2>
+          <p>Clean, premium streetwear for everyday life. Made from heavyweight garment-washed cotton and designed to be worn from morning to night.</p>
+        </div>
+        <nav class="footer-columns" aria-label="Footer">
+          <div>
+            <h3>Shop</h3>
+            <a class="nav-route" href="#/collections/zip-hoodies">Zip Hoodies</a>
+            <a class="nav-route" href="#/collections/t-shirts">T-Shirts</a>
+            <a class="nav-route" href="#/collections/sweatpants">Sweatpants</a>
+            <a class="nav-route" href="#/collections/tracksuits">Tracksuits</a>
+          </div>
+          <div>
+            <h3>Brand</h3>
+            <a class="nav-route" href="#/about">About DAYWEAR</a>
+            <a class="nav-route" href="#/lookbook">Lookbook</a>
+            <a class="nav-route" href="#/fabric-dna">Fabric DNA</a>
+            <a class="nav-route" href="#/">Drop 01</a>
+          </div>
+          <div>
+            <h3>Info</h3>
+            <a class="nav-route" href="#/shipping">Shipping</a>
+            <a class="nav-route" href="#/returns">Returns</a>
+            <a class="nav-route" href="#/contact">Contact</a>
+            <a class="nav-route" href="#/privacy">Privacy</a>
+          </div>
+        </nav>
+        <div class="footer-bottom">
+          <span>Â© 2026 DAYWEAR</span>
+          <span>Instagram / TikTok / Pinterest</span>
+        </div>
+      </footer>
+    </main>
+
+    <main id="collection-view" hidden>
+      <section class="collection-hero">
+        <div>
+          <p class="eyebrow">DAYWEAR collection</p>
+          <h1 id="collection-title">Zip Hoodies</h1>
+          <p id="collection-description"></p>
+        </div>
+        <a class="ghost-link nav-route" href="#/">Back Home</a>
+      </section>
+      <section class="collection-shop">
+        <div class="filter-bar">
+          <button class="is-active" type="button">All</button>
+          <button type="button">Washed Black</button>
+          <button type="button">Cream</button>
+          <button type="button">Mocha</button>
+          <button type="button">Dusty Olive</button>
+        </div>
+        <div class="product-line" id="product-line"></div>
+      </section>
+    </main>
+
+    <aside class="product-drawer" id="product-drawer" aria-hidden="true">
+      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close product detail">Close</button>
+      <p class="eyebrow" id="drawer-kicker">DAYWEAR</p>
+      <h2 id="drawer-title">Weekend Zip Hoodie</h2>
+      <p id="drawer-copy"></p>
+      <div class="size-selector" aria-label="Size selector">
+        <button type="button">XS</button>
+        <button type="button">S</button>
+        <button type="button" class="is-active">M</button>
+        <button type="button">L</button>
+        <button type="button">XL</button>
+      </div>
+      <div class="colorways" aria-label="Colorways">
+        <button type="button" style="--swatch:#141414" aria-label="Washed Black"></button>
+        <button type="button" style="--swatch:#d6ccbb" aria-label="Cream"></button>
+        <button type="button" style="--swatch:#7a6656" aria-label="Mocha"></button>
+        <button type="button" style="--swatch:#8b9085" aria-label="Dusty Olive"></button>
+      </div>
+      <button class="magnetic-button add-to-bag" type="button" id="add-to-bag">Add To Bag</button>
+    </aside>
+
+    <div class="cloth-transition" id="cloth-transition" aria-hidden="true"></div>
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true">DW</div>
+    <div class="custom-cursor-label" id="custom-cursor-label" aria-hidden="true">VIEW</div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DAYWEAR Redirect</title>
+    <script>
+      (function () {
+        var known = ["collections", "fabric-dna", "lookbook", "about", "contact", "shipping", "returns", "privacy", "cart"];
+        var parts = window.location.pathname.split("/").filter(Boolean);
+        var base = "/";
+        var routeParts = parts;
+
+        if (parts.length && known.indexOf(parts[0]) === -1) {
+          base = "/" + parts[0] + "/";
+          routeParts = parts.slice(1);
+        }
+
+        var route = routeParts.length ? "/" + routeParts.join("/") : "/";
+        window.location.replace(base + "#" + route + window.location.search);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting to DAYWEAR...
+  </body>
+</html>
